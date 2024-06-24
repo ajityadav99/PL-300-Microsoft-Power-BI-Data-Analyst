@@ -1,5 +1,6 @@
 ---
 lab:
+    course: 'PL-300'
     title: 'Enforce Row-Level Security'
     module: 'Enforce Row-Level Security'
 ---
@@ -28,19 +29,19 @@ In this task, you'll set up the environment for the lab.
 
     ![Power BI Desktop icon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image1.png)
 
-    *Tip: By default, the Getting Started dialog box opens in front of Power BI Desktop. **Sign-in** and then close the pop-up.*
+1. To open the starter Power BI Desktop file, select **Open > Browse this device**.
 
-1. To open the starter Power BI Desktop file, select the **File > Open Report > Browse Reports**.
+1. In the **Open** window, navigate to the **D:\Allfiles\Labs\10-row-level-security\Starter** folder, and open the **Sales Analysis** file.
 
-1. In the **Open** window, navigate to the **D:\PL300\Labs\10-row-level-security\Starter** folder, and open the **Sales Analysis** file.
+   *Note: At this point, Power BI will ask you to sign in if you haven't already. You can either sign in or select **Cancel** and continue the lab.*
 
 1. Close any informational windows that may open.
 
-1. Notice the yellow warning message beneath the ribbon. *This message alerts you to the fact that the queries haven't been applied to load as model tables. You’ll apply the queries later in this lab.*
+1. Notice the warning message beneath the ribbon. *This message alerts you to the fact that the queries haven't been applied to load as model tables. You’ll apply the queries later in this lab.*
     
-	*To dismiss the warning message, at the right of the yellow warning message, select **X**.*
+	*To dismiss the warning message, at the right of the warning message, select **X**.*
 
-1. To create a copy of the file, go to **File > Save As** and save to **D:\PL300\MySolution** folder.
+1. To create a copy of the file, go to **File > Save As** and save to **D:\Allfiles\MySolution** folder.
 
 1. If prompted to apply changes, select **Apply Later**.
 
@@ -48,7 +49,7 @@ In this task, you'll set up the environment for the lab.
 
 In this task, you'll enforce row-level security to ensure a salesperson can only see sales made in their assigned region(s).
 
-1. Switch to Data view.
+1. Switch to Table view.
 
    ![Picture 5701](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image20.png)
 
@@ -59,27 +60,35 @@ In this task, you'll enforce row-level security to ensure a salesperson can only
     
 	*You may recall that Michael Blythe is assigned to three sales regions: US Northeast, US Central, and US Southeast.*
 
-1. On the **Modeling** ribbon tab, from inside the **Security** group, select **Manage Roles**.
+1. On the **Home** ribbon tab, from inside the **Security** group, select **Manage Roles**.
 
     ![Picture 5700](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image21.png)
 
-1. In the **Manage Roles** window, select **Create**.
+1. In the **Manage security roles** window, in the **Roles** section, select **New**.
 
 1. In the box, replace the selected text with the name of the role: **Salespeople**, and then press **Enter**.
 
    ![Picture 5703](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image23.png)
 
-1. To assign a filter, for the **Salesperson (Performance)** table, select the ellipsis (…) character, and then select **Add Filter \| [UPN]**.
+1. To assign a filter, select the **Salesperson (Performance)** table, and then select **Switch to DAX editor** in the **Filter data** section.
 
-   ![Picture 5704](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image24.png)
+   ![Screenshot 2024-04-18 144345](https://github.com/afelix-95/PL-300-Microsoft-Power-BI-Data-Analyst/assets/148110824/1308d47f-2cca-4f88-9237-b02b66b4cf1e)
 
-1. In the **Table Filter DAX Expression** box, modify the expression by replacing **“Value”** with **USERPRINCIPALNAME()**, and then **Save**.
+1. In the DAX editor box, enter the following expression:
+
+   	**DAX**
+
+	```
+	[UPN] = USERPRINCIPALNAME()
+	```
     
 	*USERPRINCIPALNAME() is a Data Analysis Expressions (DAX) function that returns the name of the authenticated user. It means that the **Salesperson (Performance)** table will filter by the User Principal Name (UPN) of the user querying the model.*
 
    ![Picture 11](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image25.png)
 
-1. To test the security role, on the **Modeling** ribbon tab, from inside the **Security** group, select **View As**.
+1. Select **Save** and **Close**.
+
+1. To test the security role, on the **Home** ribbon tab, from inside the **Security** group, select **View As**.
 
    ![Picture 5708](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image27.png)
 
@@ -103,13 +112,13 @@ In this task, you'll enforce row-level security to ensure a salesperson can only
 
    ![Picture 5712](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image32.png)
 
-1. To delete the **Salespeople** role, on the **Modeling** ribbon tab, from inside the **Security** group, select **Manage Roles**.
+1. To delete the **Salespeople** role, on the **Home** ribbon tab, from inside the **Security** group, select **Manage Roles**.
 
    ![Picture 16](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image33.png)
 
-1. In the **Manage Roles** window, select **Delete**. When prompted to confirm the deletion, select **Yes, Delete**.
+1. In the **Manage security roles** window, select the ellipsis (...) on the **Salespeople** role, and select **Delete**. When prompted to confirm the deletion, select **Yes, Delete**.
 
-   ![Picture 17](Linked_image_Files/04-configure-data-model-in-power-bi-desktop-advanced_image34.png)
+   ![Screenshot 2024-04-18 145556](https://github.com/afelix-95/PL-300-Microsoft-Power-BI-Data-Analyst/assets/148110824/deeb4eac-b639-433d-a9d4-29c8e127008e)
 
 ### **Finish up**
 

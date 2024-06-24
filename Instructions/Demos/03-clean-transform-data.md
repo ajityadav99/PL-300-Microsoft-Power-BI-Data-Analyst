@@ -1,8 +1,10 @@
 ---
-lab:
-    title: 'Clean, transform, and load data in Power BI'
-    module: 'Clean, transform, and load data in Power BI'
+demo:
+     course: 'PL-300, DP-605'
+     title: 'Clean, transform, and load data in Power BI'
+     module: 'Clean, transform, and load data in Power BI'
 ---
+
 # Clean, transform, and load data in Power BI
 
 ## Apply query transformations
@@ -47,7 +49,7 @@ lab:
 
 ## Integrate queries
 
-1. Create a new query using the Excel connector, connecting to the D:\PL300\Demo\Data\ProductCost.xlsx file.
+1. Create a new query using the Excel connector, connecting to the D:\Allfiles\Demo\Data\ProductCost.xlsx file.
 
 1. Remove the Product column.
 

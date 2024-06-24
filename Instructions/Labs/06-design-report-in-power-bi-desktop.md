@@ -1,5 +1,6 @@
 ---
 lab:
+    course: 'PL-300, DP-605'
     title: 'Design a Report in Power BI Desktop'
     module: 'Create Reports in Power BI Desktop'
 ---
@@ -22,11 +23,13 @@ In this lab you learn how to:
 
 In this task, you'll set up the environment for the lab by opening the starter report.
 
-1. From Power BI Desktop, navigate to **File** > **Open report** > **Browse Reports**.
+1. From Power BI Desktop, navigate to **Open > Browse this device**.
 
-1. Open the **Sales Analysis** file in the  **D:\PL300\Labs\06-design-report-in-power-bi-desktop\Starter** folder.
+1. Open the **Sales Analysis** file in the  **D:\Allfiles\Labs\06-design-report-in-power-bi-desktop\Starter** folder.
 
-1. Create a copy of the file by going to **File** > **Save As**, and save the copy in the **D:\PL300\MySolution** folder.
+   *Note: At this point, Power BI will ask you to sign in if you haven't already. You can either sign in or select **Cancel** and continue the lab.*
+
+1. Create a copy of the file by going to **File** > **Save As**, and save the copy in the **D:\Allfiles\MySolution** folder.
 
 ## **Design page 1**
 
@@ -42,7 +45,7 @@ In this task, you'll design the first report page. When you’ve completed the d
 
     ![Picture 1](Linked_image_Files/07-design-report-in-power-bi-desktop_image15.png)
 
-1. In the **Open** window, navigate to the **D:\PL300\Resources** folder.
+1. In the **Open** window, navigate to the **D:\Allfiles\Resources** folder.
 
 1. Select the **AdventureWorksLogo.jpg** file, and then select **Open**.
 
@@ -171,7 +174,7 @@ In this task, you'll design the second report page. When you’ve completed the 
 
 1. Add a slicer based on the **Region \| Region** field.
 
-1. Use the **Format** pane to enable the “Select All” option (in the **Selection** group).
+1. Use the **Format** pane to enable the “Select All” option (in the **Slicer settings > Selection** group).
 
 1. Resize and position the slicer so it sits at the left side of the report page, and so it is about half the page height.
 
@@ -190,8 +193,8 @@ In this task, you'll design the second report page. When you’ve completed the 
      - Orders (from the **Counts** folder)
      - Sales
      - Cost
-     - Profit
-     - Profit Margin
+     - Profit (from the **Pricing** folder)
+     - Profit Margin (from the **Pricing** folder)
 
      ![Picture 55](Linked_image_Files/07-design-report-in-power-bi-desktop_image43.png)
 
@@ -314,12 +317,12 @@ In this task, you'll explore the report that was published to Power BI.
 
 1. In the Microsoft Edge browser window, in the Power BI service, in the **Navigation** pane (located at the left, and it could be collapsed), expand **My Workspace**.
 
-    ![Picture 93](Linked_image_Files/06-my-workspace-new.png)
+    ![Screenshot 2024-04-18 101424](https://github.com/afelix-95/PL-300-Microsoft-Power-BI-Data-Analyst/assets/148110824/346415bc-e559-4559-84b5-ef3a1f808461)
 
-1. Review the contents of the workspace. Notice the navigation options of All, Content, and Datasets + dataflows.
-    1. *There are four types of items that can exist in a workspace, and we'll talk about **reports** and **datasets**.*
-    1. *You may need to refresh your Microsoft Edge browser if the dataset is not visible.*
-    1. *When you published the Power BI Desktop file, the data model was published as a dataset.*
+1. Review the contents of the workspace.
+    1. *There are four types of items that can exist in a workspace, and we'll talk about **reports** and **semantic models**.*
+    1. *You may need to refresh your Microsoft Edge browser if the semantic model is not visible.*
+    1. *When you published the Power BI Desktop file, the data model was published as a semantic model.*
 
 1. To explore the report, select the **Sales Analysis** report.
 

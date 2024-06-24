@@ -1,5 +1,6 @@
 ---
 lab:
+    course: 'PL-300'
     title: 'Create a Power BI Dashboard'
     module: 'Create Dashboards'
 ---
@@ -38,43 +39,19 @@ In this task, you'll set up the environment for the lab by signing in to Power B
 
      ![Picture 22](Linked_image_Files/07-my-workspace-new.png)
 
-## **Get started – Open report**
-
-In this task, you'll set up the environment for the lab by opening the starter report.
-
-*Important: If you're continuing on from the previous lab (and you completed that lab successfully), don't complete this task; instead, continue from the next task.*
-
-1. Open Power BI Desktop.
-    
-	*By default, the Getting Started dialog box opens in front of Power BI Desktop. Sign-in, and then close the pop-up.*
-
-    ![Power BI Desktop icon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image1.png)
-
-1. To open the starter Power BI Desktop file, select the **File > Open Report > Browse Reports**.
-
-1. In the **Open** window, navigate to the **D:\PL300\Labs\09-create-power-bi-dashboard\Starter** folder, and open the **Sales Analysis** file.
-
-1. Close any informational windows that may open.
-
-1. Notice the yellow warning message beneath the ribbon. *This message alerts you to the fact that the queries haven't been applied to load as model tables. You’ll apply the queries later in the lab.*
-    
-	*To dismiss the warning message, at the right of the yellow warning message, select **X**.*
-
-1. If prompted to apply changes, select **Apply Later**.
-
 ## **Get started – Publish the report**
 
-In this task, you'll set up the environment for the lab by creating a dataset. *If you've already published the dataset, please move to the next task.*
+In this task, you'll set up the environment for the lab by creating a semantic model. *If you've already published the semantic model, please move to the next task.*
 
 1. In the Microsoft Edge browser window, in the Power BI service, navigate to **My Workspace**.
 
 1. Select **Upload > Browse**.
 
-1. Navigate to **D:\PL300\Labs\09-create-power-bi-dashboard\Starter** folder.
+1. Navigate to **D:\Allfiles\Labs\09-create-power-bi-dashboard\Starter** folder.
 
 1. Select the **Sales Analysis.pbix** file, and then select **Open**.
 
-*If prompted to replace the dataset, select **Replace it**.*
+*If prompted to replace the semantic model, select **Replace it**.*
 
 ## **Create a dashboard**
 
@@ -110,7 +87,7 @@ In this task, you'll create the **Sales Monitoring** dashboard. You'll pin a vis
 
     ![Picture 7](Linked_image_Files/09-create-power-bi-dashboard_image23.png)
 
-1. Select any one of the suggested questions beneath the Q&A box, in blue boxes, and review the response.
+1. Select any one of the suggested questions beneath the Q&A box and review the response.
 
 1. Remove all text from the Q&A box, and enter the following: **Sales YTD**
 
@@ -140,11 +117,11 @@ In this task, you'll create the **Sales Monitoring** dashboard. You'll pin a vis
 
 1. In the **Add a Tile** pane (located at the right), select the **Image** tile, then **Next**.
 
-1. In the **Add Image Tile** pane, in the **URL** box, enter the complete URL found in the **D:\PL300\Resources\AdventureWorksLogo_DataURL.txt** file, and then **Apply**.
+1. In the **Add Image Tile** pane, in the **URL** box, enter the complete URL found in the **D:\Allfiles\Resources\AdventureWorksLogo_DataURL.txt** file, and then **Apply**.
     
 	*You can embed an image by using its URL, or you can use a data URL, which embeds content inline.*
 
-1. To resize the logo tile, drag the bottom-right corner, and resize the tile to become one unit wide, and two units high.
+1. To resize the logo tile, drag the bottom-right corner, and resize the tile to become one unit wide, and one unit high.
     
 	*Tile sizes are limited to a rectangular shape.*
 
@@ -174,9 +151,9 @@ In this task, you'll edit the details of two tiles.
 
 1. Notice that the tile describes the last refresh time (which done when loading the data model in Power BI Desktop).
 
-*You’ll refresh the dataset in the next exercise. Depending on your data and report, you can do an adhoc data refresh anytime or set a schedule. However, scheduled refreshes require gateways that we aren't able to configure for this lab. So from Power BI Desktop, you'll perform a manual data refresh, and then upload the file to your workspace.*
+*You’ll refresh the semantic model in the next exercise. Depending on your data and report, you can do an adhoc data refresh anytime or set a schedule. However, scheduled refreshes require gateways that we aren't able to configure for this lab. So from Power BI Desktop, you'll perform a manual data refresh, and then upload the file to your workspace.*
 
-## **Refresh the Dataset**
+## **Refresh the Semantic model**
 
 In this exercise, you'll first load sales order data for June 2020 into the **AdventureWorksDW2020** database. You'll then open your Power BI Desktop file, perform a data refresh, and then upload the file to your workspace.
 
@@ -184,7 +161,7 @@ In this exercise, you'll first load sales order data for June 2020 into the **Ad
 
 In this task, you'll run a PowerShell script to update data in the **AdventureWorksDW2020** database.
 
-1. In File Explorer, inside the **D:\PL300\Setup** folder, right-click the **UpdateDatabase-2-AddSales.ps1** file, and then select **Run with PowerShell**.
+1. In File Explorer, inside the **D:\Allfiles\Setup** folder, right-click the **UpdateDatabase-2-AddSales.ps1** file, and then select **Run with PowerShell**.
 
     ![Picture 28](Linked_image_Files/09-create-power-bi-dashboard_image46.png)
 
@@ -208,11 +185,11 @@ In this task you'll open the **Sales Analysis** Power BI Desktop file, perform a
 
     ![Picture 59](Linked_image_Files/09-create-power-bi-dashboard_image48.png)
 
-1. When prompted to replace the dataset, select **Replace**.
+1. When prompted to replace the semantic model, select **Replace**.
 
 1. Close Power BI Desktop.
 
-*The dataset in the Power BI service now has June 2020 sales data.*
+*The semantic model in the Power BI service now has June 2020 sales data.*
 
 ### **Review the dashboard**
 

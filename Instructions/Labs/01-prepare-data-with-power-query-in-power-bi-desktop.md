@@ -1,5 +1,6 @@
 ---
 lab:
+    course: 'PL-300, DP-605'
     title: 'Get Data in Power BI Desktop'
     module: 'Get Data in Power BI'
 ---
@@ -19,26 +20,26 @@ This lab is designed to introduce you to Power BI Desktop application and how to
 
 ## **Get started with Power BI Desktop**
 
-In this task, you start by opening a starter Power BI (.pbix) file. The starter file doesn't contain any data, but has been specially configured to help you complete the lab. The following report-level settings have been disabled in the starter file:
+ In this task, you start by opening a starter Power BI (.pbix) file. The starter file doesn't contain any data, but has been specially configured to help you complete the lab. The following report-level settings have been disabled in the starter file:
 
 - Data Load > Import relationships from data sources on first load
 - Data Load > Autodetect new relationships after data is loaded
 
-*Note: While having these two options enabled can be helpful when developing a data model, you disabled them earlier to support the lab experience. When you create relationships in the **Load Data in Power BI Desktop** lab, you’ll learn why you're adding each one.*
+*Note: While having these two options enabled can be helpful when developing a data model, you disabled them earlier to support the lab experience. When you create relationships in the **Load Transformed Data in Power BI Desktop** lab, you’ll learn why you're adding each one.*
 
 1. Open Power BI Desktop.
 
     ![Power BI Desktop icon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image1.png)
 
-    *Tip: By default, the Getting Started dialog box opens in front of Power BI Desktop. You can choose to sign-in, and then close the pop-up.*
+1. To open the starter Power BI Desktop file, select the **Open > Browse this device**.
 
-1. To open the starter Power BI Desktop file, select the **File > Open Report > Browse Reports**.
-
-1. In the **Open** window, navigate to the **D:\PL300\Labs\01-prepare-data-with-power-query-in-power-bi-desktop\Starter** folder.
+1. In the **Open** window, navigate to the **D:\Allfiles\Labs\01-prepare-data-with-power-query-in-power-bi-desktop\Starter** folder.
 
 1. Select the **Sales Analysis** file.
 
-1. Save a copy of the file with **Save As** in to the **D:\PL300\MySolution** folder.
+    *Note: At this point, Power BI will ask you to sign in if you haven't already. You can either sign in or select **Cancel** and continue the lab.*
+
+1. Save a copy of the file with **File > Save As** in to the **D:\Allfiles\MySolution** folder.
 
 ## **Get data from SQL Server**
 
@@ -48,23 +49,23 @@ This task teaches you how to connect to a SQL Server database and import tables,
 
      ![SQL Server Get Data icon](Linked_image_Files/01-prepare-data-with-power-query-in-power-bi-desktop_image11.png)
 
-1. In the **SQL Server Database** window, in the **Server** box, enter **localhost**, then select **OK**.
+1. In the **SQL Server Database** window, in the **Server** box, enter **localhost** and leave **Database** blank, then select **OK**.
 
     *Note: In this lab, you’ll connect to the SQL Server database by using **localhost** because gateway data sources can't resolve **localhost**. This isn’t a recommended practice when creating your own solutions.*
 
 1. If prompted for credentials, in the **SQL Server Database** window, select **Use my current credentials**, and then **Connect**.
 
-1. In the **Navigator** window, at the left, expand the **AdventureWorksDW2020** database.
+1. In the **Navigator** pane, expand the **AdventureWorksDW2020** database.
 
     *Note: The **AdventureWorksDW2020** database is based on the **AdventureWorksDW2017** sample database. It has been modified to support the learning objectives of the course labs.*
 
-1. Select—but don’t check—the **DimEmployee** table
+1. Select the **DimEmployee** table, and notice the preview of the table data.
 
      ![AdventureWorksDW2020 database with DimEmployee indicated](Linked_image_Files/01-prepare-data-with-power-query-in-power-bi-desktop_image18.png)
 
-1. In the right pane, notice a preview of the table data. The preview data allows you to see the columns and a sample of rows.
+    *Note: The preview data allows you to see the columns and a sample of rows.*
 
-1. To create queries, select the checkbox next to the following six tables:
+1. To import the table data, **select the checkbox** next to the following six tables:
 
     - DimEmployee
     - DimEmployeeSalesTerritory
@@ -73,12 +74,13 @@ This task teaches you how to connect to a SQL Server database and import tables,
     - DimSalesTerritory
     - FactResellerSales
 
-1. Complete this task by clicking **Transform Data**, which will open Power Query Editor.
-    1. *This lab is only intended to connect to and profile the data, but not **transform data**.*
+1. Complete this task by selecting **Transform Data**, which will open Power Query Editor.
+
+You've now connected to the data and have the Power Query Editor open for the next task.
 
 ## **Preview Data in Power Query Editor**
 
-This task introduces the Power Query Editor and allows you to review and profile the data. This helps you determine how to clean and transform the data later.
+This task introduces the Power Query Editor and allows you to review and profile the data. This helps you determine how to clean and transform the data later. You'll also review both dimension tables prefixed with "Dim" and fact tables prefixed with "Fact".
 
 1. In the **Power Query Editor** window, at the left, notice the **Queries** pane. The **Queries** pane contains one query for each table you checked.
 
@@ -94,7 +96,7 @@ This task introduces the Power Query Editor and allows you to review and profile
 
 1. In the data preview pane, scroll horizontally to review all columns. Notice that the last five columns contain **Table** or **Value** links.
 
-    *These five columns represent relationships to other tables in the database. They can be used to join tables together. You’ll join tables in the **Load Data in Power BI Desktop** lab.*
+    *These five columns represent relationships to other tables in the database. They can be used to join tables together. You’ll join tables in the **Load Transformed Data in Power BI Desktop** lab.*
 
 1. To assess column quality, on the **View** ribbon tab, from inside the **Data Preview** group, check **Column Quality**. The column quality feature allows you to easily determine the percentage of valid, error, or empty values found in columns.
 
@@ -114,15 +116,9 @@ This task introduces the Power Query Editor and allows you to review and profile
 
      ![Column distribution showing 296 distinct, 296 unique values](Linked_image_Files/01-prepare-data-with-power-query-in-power-bi-desktop_image26.png)
 
-1. In the **Queries** pane, select the **DimEmployeeSalesTerritory** query.
+1. In the **Queries** pane, select the **DimProduct** query.
 
-    *The **DimEmployeeSalesTerritory** table stores one row for each employee and the sales territory regions they manage. The table supports relating many regions to a single employee. Some employees manage one, two, or possibly more regions. When you model this data, you’ll need to define a many-to-many relationship.*
-
-1. In the **Queries** pane, select the **DimProduct** query. The **DimProduct** table contains one row per product sold by the company.
-
-1. Horizontally scroll to reveal the last columns. Notice the **DimProductSubcategory** column.
-
-    *When you add transformations to this query in the **Load Data in Power BI Desktop** lab, you’ll use the **DimProductSubcategory** column to join tables.*
+    *The **DimProduct** table contains one row per product sold by the company.*
 
 1. In the **Queries** pane, select the **DimReseller** query.
 
@@ -140,7 +136,7 @@ This task introduces the Power Query Editor and allows you to review and profile
 
 1. Hover the cursor over the **Ware House** bar, and notice that there are five rows with this value.
 
-    *You’ll apply a transformation to relabel these five rows in the **Load Data in Power BI Desktop** lab.*
+    *You’ll apply a transformation to relabel these five rows in the **Load Transformed Data in Power BI Desktop** lab.*
 
 1. In the **Queries** pane, select the **DimSalesTerritory** query.  
 
@@ -152,7 +148,7 @@ This task introduces the Power Query Editor and allows you to review and profile
 
 1. Review the column quality for the **TotalProductCost** column, and notice that 8% of the rows are empty.
 
-    *Missing **TotalProductCost** column values is a data quality issue. To address the issue, in the **Load Data in Power BI Desktop** lab, you’ll apply transformations to fill in missing values by using the product standard cost, which is stored in the related **DimProduct** table.*
+    *Missing **TotalProductCost** column values is a data quality issue. To address the issue, in the **Load Transformed Data in Power BI Desktop** lab, you’ll apply transformations to fill in missing values by using the product standard cost, which is stored in the related **DimProduct** table.*
 
 ## **Get data from a CSV file**
 
@@ -160,7 +156,7 @@ In this task, you'll create a new query based on CSV files.
 
 1. To add a new query, in the **Power Query Editor** window, on the **Home** ribbon tab, from inside the **New Query** group, select the **New Source** down-arrow, and then select **Text/CSV**.
 
-1. In the **Open** window, navigate to the **D:\PL300\Resources** folder, and select the **ResellerSalesTargets.csv** file. Select **Open**.
+1. In the **Open** window, navigate to the **D:\Allfiles\Resources** folder, and select the **ResellerSalesTargets.csv** file. Select **Open**.
 
 1. In the **ResellerSalesTargets.csv** window, review the preview data. Select **OK**.
 
@@ -174,7 +170,7 @@ In this task, you'll create a new query based on CSV files.
 
      ![Picture 74](Linked_image_Files/01-prepare-data-with-power-query-in-power-bi-desktop_image38.png)
 
-1. Repeat the steps to create a query based on the **D:\PL300\Resources\ColorFormats.csv** file.
+1. Repeat the steps to create a query based on the **D:\Allfiles\Resources\ColorFormats.csv** file.
 
     *The **ColorFormats** CSV file contains one row per product color. Each row records the HEX codes to format background and font colors.*
 

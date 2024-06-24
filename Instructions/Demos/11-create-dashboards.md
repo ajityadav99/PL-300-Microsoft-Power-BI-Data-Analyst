@@ -1,7 +1,8 @@
 ---
-lab:
-    title: 'Create dashboards in the Power BI service'
-    module: 'Deploy and manage Power BI service items'
+demo:
+     course: 'PL-300'
+     title: 'Create dashboards in the Power BI service'
+     module: 'Deploy and manage Power BI service items'
 ---
 # Create dashboards in the Power BI service
 
@@ -9,7 +10,7 @@ lab:
 
 1. First, in the Power BI service, create a new workspace.
 
-1. Select the `D:\PL300\Demo\Resources\Icon-Airplane.jpg` image for workspace icon.
+1. Select the `D:\Allfiles\Demo\Resources\Icon-Airplane.jpg` image for workspace icon.
 
 1. In Power BI Desktop, publish the **Sales Analysis** report to the new workspace.
 

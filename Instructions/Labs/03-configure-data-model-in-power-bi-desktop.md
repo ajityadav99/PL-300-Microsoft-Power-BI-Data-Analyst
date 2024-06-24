@@ -1,5 +1,6 @@
 ---
 lab:
+    course: 'PL-300, DP-605'
     title: 'Design a Data Model in Power BI'
     module: 'Design a Data Model in Power BI'
 ---
@@ -27,15 +28,15 @@ In this task, you'll set up the environment for the lab.
 
     ![Power BI Desktop icon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image1.png)
 
-    *Tip: By default, the Getting Started dialog box opens in front of Power BI Desktop. You can choose to sign-in, and then close the pop-up.*
+1. To open the starter Power BI Desktop file, select **Open > Browse this device**.
 
-1. To open the starter Power BI Desktop file, select the **File > Open Report > Browse Reports**.
+1. Navigate to the **D:\Allfiles\Labs\03-configure-data-model-in-power-bi-desktop\Starter** folder and select the **Sales Analysis** file.
 
-1. Navigate to the **D:\PL300\Labs\03-configure-data-model-in-power-bi-desktop\Starter** folder and select the **Sales Analysis** file.
+   *Note: At this point, Power BI will ask you to sign in if you haven't already. You can either sign in or select **Cancel** and continue the lab.*
 
 1. Close any informational windows that may open.
 
-1. Go to **File > Save As** and save the file to the **D:\PL300\MySolution** folder.
+1. Go to **File > Save As** and save the file to the **D:\Allfiles\MySolution** folder.
 
 ## **Create model relationships**
 
@@ -75,7 +76,7 @@ In this task, you'll create model relationships. The file was configured to not 
 
 1. To create a relationship, select **New**.
 
-1. In the **Create Relationship** window, in the first dropdown list, select the **Product** table.
+1. In the **New Relationship** window, in the first dropdown list, select the **Product** table.
 
      ![Picture 333](Linked_image_Files/03-configure-data-model-in-power-bi-desktop_image16.png)
 
@@ -246,7 +247,7 @@ In this task, you'll configure the **Sales** table.
 
 In this task, you'll update multiple columns using single bulk updates. You'll use this approach to hide columns, and format column values.
 
-1. In the **Data** pane, select the **Product \| ProductKey** column.
+1. From the **Model view** > **Data** pane, select the **Product \| ProductKey** column.
 
 1. While pressing the **Ctrl** key, select the following 13 columns (spanning multiple tables):
 
@@ -336,7 +337,7 @@ In this task, you'll create two quick measures to calculate profit and profit ma
 
 1. Drag the **Sales** field into the **Base Value** box.
 
-1. Drag the **Cost** field into the **Value to Subtract** box.
+1. Drag the **Cost** field into the **Value to Subtract** box, then select **Add**.  
 
      ![Picture 368](Linked_image_Files/03-configure-data-model-in-power-bi-desktop_image48.png)
 
@@ -377,8 +378,6 @@ In this task, you'll create two quick measures to calculate profit and profit ma
 ## **Create a many-to-many relationship**
 
 In this task, you'll create a many-to-many relationship between the **Salesperson** table and the **Sales** table.
-
- *The labs use a shorthand notation to reference a field. It will look like this: **Salesperson \| Salesperson** . In this example, **Salesperson**  is the table name and **Salesperson**  is the field name.*
 
 1. In Power BI Desktop, in Report view, in the **Data** pane, check the follow two fields to create a **table** visual.
 
