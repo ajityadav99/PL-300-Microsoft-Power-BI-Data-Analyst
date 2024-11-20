@@ -17,7 +17,7 @@ In this lab you learn how to:
 - Use the optional Axis parameter when creating comparison metrics.
 - Use the optional Reset parameter to customize cumulative calculations in a multi-leveled axis.
 
-**This lab should take approximately 45 minutes.**
+**This lab should take approximately 30 minutes.**
 
 ## Get started
 
