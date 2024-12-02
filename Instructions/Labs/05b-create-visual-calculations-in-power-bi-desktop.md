@@ -31,8 +31,6 @@ Open the **05b-Starter-Sales Analysis.pbix** file.
 
 > ***Note**: You can dismiss the sign-in by selecting **Cancel**. Close any other informational windows. Select **Apply Later**, if prompted to apply changes.*
 
-In Power BI Desktop, go to **File > Options and Settings > Options > Preview features**. Select **Visual calculations** and select **OK**. Visual calculations are enabled after Power BI Desktop is restarted.
-
 ## Create a bar chart visual
 
 In this task, you’ll create a bar chart showing sales amount, total product cost, and profit by fiscal year, with comparison metrics as tooltips.
