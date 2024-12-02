@@ -126,7 +126,7 @@ In this task, you'll create a matrix visual that compares the sales amount per c
 1. In the visual calculations edit window, type and save the following calculation:
 
    ```DAX
-    Versus first = [Sales] - FIRST([Sales])
+    Versus first = [Sum of Sales] - FIRST([Sum of Sales])
    ```
 
 > Notice how the matrix shows the difference in sales amount for each category versus the first category.
@@ -134,7 +134,7 @@ In this task, you'll create a matrix visual that compares the sales amount per c
 1. Select the field **Versus first** in the **Values** well/area and update your calculation by adding the ROWS value for the Axis parameter to FIRST:
 
    ```DAX
-    Versus first = [Sales] - FIRST([Sales], ROWS)
+    Versus first = [Sum of Sales] - FIRST([Sum of Sales], ROWS)
    ```
 
 > Notice how nothing changes as ROWS is the default value for the Axis parameter.
