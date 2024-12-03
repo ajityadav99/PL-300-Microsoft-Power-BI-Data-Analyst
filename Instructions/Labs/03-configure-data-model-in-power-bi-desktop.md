@@ -178,7 +178,7 @@ In this task, you'll configure the **Reseller** table to add a hierarchy and upd
 
     - Country-Region to **Country/Region**
     - State-Province to **State or Province**
-    - City** to **City**
+    - City to **City**
 
 ## Configure the Sales table
 
