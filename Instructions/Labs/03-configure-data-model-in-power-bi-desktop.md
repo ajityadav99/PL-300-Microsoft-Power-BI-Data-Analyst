@@ -257,7 +257,7 @@ In this task you'll switch to Report view, review the data model interface, and 
 
       ![Picture 359](Linked_image_Files/03-configure-data-model-in-power-bi-desktop_image40.png)
 
-> *Important**: *These hierarchies weren't created by you. They were created automatically as a default setting. There's a problem, however. The Adventure Works financial year commences on July 1 of each year. But, in these automatically created date hierarchies, the date hierarchy year commences on January 1 of each year.*
+> **Important**: *These hierarchies weren't created by you. They were created automatically as a default setting. There's a problem, however. The Adventure Works financial year commences on July 1 of each year. But, in these automatically created date hierarchies, the date hierarchy year commences on January 1 of each year.*
 
 1. To turn off the **Auto date/time** setting, Navigate to **File > Options and Settings > Options**.
 
