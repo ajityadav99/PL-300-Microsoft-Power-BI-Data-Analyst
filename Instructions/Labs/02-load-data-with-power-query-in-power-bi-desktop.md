@@ -37,27 +37,27 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
 
 1. To open the **Power Query Editor** window, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform Data** icon.
 
-     ![Transform Data on Home ribbon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image10.png)
+	![Transform Data on Home ribbon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image10.png)
 
 1. In the **Power Query Editor** window, in the **Queries** pane, select the **DimEmployee** query.
 
-     ![Picture 1](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image11.png)
+	![Picture 1](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image11.png)
 
-> **Note:** If you receive a warning message asking to specify how to connect, select **Edit Credentials**, connect using current credentials, and select **OK** to use an unencrypted connection.
+	> **Note:** If you receive a warning message asking to specify how to connect, select **Edit Credentials**, connect using current credentials, and select **OK** to use an unencrypted connection.
  
 1. To rename the query, in the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Salesperson**, and then press **Enter**. Then verify the name has been updated in **Queries** pane.
 
-    > *The query name determines the model table name. It’s recommended to define concise and user-friendly names.*
+	> *The query name determines the model table name. It’s recommended to define concise and user-friendly names.*
 
 1. To locate a specific column, on the **Home** ribbon tab, select the **Manage Columns** down-arrow, select the **Choose Columns** down-arrow, and then select **Go to Column**.
 
-    > *Go to Column is a useful feature with many columns. Otherwise, you can horizontally scroll find columns.*
+	> *Go to Column is a useful feature with many columns. Otherwise, you can horizontally scroll find columns.*
 
-     ![Manage columns > Choose columns > Go to column](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image13.png)
+	![Manage columns > Choose columns > Go to column](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image13.png)
 
 1. In the **Go to Column** window, to order the list by column name, select the **AZ** sort button, and then select **Name** and **SalesPersonFlag**. Click **OK**.
 
-     ![Go to column sort options](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image14.png)
+	![Go to column sort options](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image14.png)
 
 1. Locate the **SalesPersonFlag** column, then filter the column to select only Salespeople (that is, **TRUE**), and click **OK**.
 
@@ -65,7 +65,7 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
 
 	> *Each transformation you create results in another step logic. It’s possible to edit or delete steps. It’s also possible to select a step to preview the query results at that stage of the query transformation.*
 
-     ![Applied steps](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image17.png)
+	![Applied steps](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image17.png)
 
 1. To remove columns, on the **Home** ribbon tab, select the **Manage Columns** group, select the **Choose Columns** icon.
 
@@ -73,20 +73,20 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
 
 1. To include columns, check the following six columns:
 
-    - EmployeeKey
-    - EmployeeNationalIDAlternateKey
-    - FirstName
-    - LastName
-    - Title
-    - EmailAddress
+	- EmployeeKey
+	- EmployeeNationalIDAlternateKey
+	- FirstName
+	- LastName
+	- Title
+	- EmailAddress
 
 1. In the **Applied Steps** list, notice the addition of another query step.
 
-     ![Removed other columns step](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image21.png)
+	![Removed other columns step](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image21.png)
 
 1. To create a single name column, first select the **FirstName** column header. While pressing the **Ctrl** key, select the **LastName** column.
 
-     ![Multi-select two columns to create single column](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image22.png)
+	![Multi-select two columns to create single column](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image22.png)
 
 1. Right-click either of the select column headers, and then in the context menu, select **Merge Columns**.
 
@@ -132,24 +132,24 @@ In this task, you'll configure the **Product** query.
 
 1. Remove all columns, **except** the following:
 
-    - ProductKey
-    - EnglishProductName
-    - StandardCost
-    - Color
-    - DimProductSubcategory
+	- ProductKey
+	- EnglishProductName
+	- StandardCost
+	- Color
+	- DimProductSubcategory
 
 1. Notice that the **DimProductSubcategory** column represents a related table (it contains **Value** links).
 
 1. In the **DimProductSubcategory** column header, at the right of the column name, select the expand button.
 
-    ![Column expand icon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image31.png)
+	![Column expand icon](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image31.png)
 
 1. See the full list of columns, then select the **Select All Columns** box to unselect all columns.
 
 1. Select **EnglishProductSubcategoryName** and **DimProductCategory**, and uncheck the **Use Original Column Name as Prefix** checkbox before selecting **OK**.
 
 	> *By selecting these two columns, a transformation will be applied to join to the **DimProductSubcategory** table, and then include these columns. The **DimProductCategory** column is, in fact, another related table in the data source.*
-    >
+
 	> *Query column names must always be unique. If left checked, this checkbox would prefix each column with the expanded column name (in this case **DimProductSubcategory**). Because it’s known that the selected column names don’t collide with column names in the **Product** query, the option is deselected.*
 
 1. Notice that the transformation resulted in the addition of two columns, and that the **DimProductSubcategory** column has been removed.
@@ -158,10 +158,10 @@ In this task, you'll configure the **Product** query.
 
 1. Rename the following four columns:
 
-    - **EnglishProductName** to **Product**
-    - **StandardCost** to **Standard Cost** (include a space)
-    - **EnglishProductSubcategoryName** to **Subcategory**
-    - **EnglishProductCategoryName** to **Category**
+	- **EnglishProductName** to **Product**
+	- **StandardCost** to **Standard Cost** (include a space)
+	- **EnglishProductSubcategoryName** to **Subcategory**
+	- **EnglishProductCategoryName** to **Category**
 
 **In the status bar, verify that the query has 6 columns and 397 rows.**
 
@@ -173,16 +173,16 @@ In this task, you'll configure the **Reseller** query.
 
 1. Remove all columns, **except** the following:
 
-    - ResellerKey
-    - BusinessType
-    - ResellerName
-    - DimGeography
+	- ResellerKey
+	- BusinessType
+	- ResellerName
+	- DimGeography
 
 1. Expand the **DimGeography** column, to include **only** the following three columns:
 
-    - City
-    - StateProvinceName
-    - EnglishCountryRegionName
+	- City
+	- StateProvinceName
+	- EnglishCountryRegionName
 
 1. On the **Business Type** column header, select the down-arrow, and then review the distinct column values, and notice both values **Warehouse** and **Ware House**.
 
@@ -190,17 +190,17 @@ In this task, you'll configure the **Reseller** query.
 
 1. In the **Replace Values** window, configure the following values:
 
-    - In the **Value to Find** box, enter **Ware House**
-    - In the **Replace With** box, enter **Warehouse**
+	- In the **Value to Find** box, enter **Ware House**
+	- In the **Replace With** box, enter **Warehouse**
 
-     ![Replace values dialog](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image40.png)
+ 	![Replace values dialog](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image40.png)
 
 1. Rename the following four columns:
 
-    - **BusinessType** to **Business Type** (include a space)
-    - **ResellerName** to **Reseller**
-    - **StateProvinceName** to **State-Province**
-    - **EnglishCountryRegionName** to **Country-Region**
+	- **BusinessType** to **Business Type** (include a space)
+	- **ResellerName** to **Reseller**
+	- **StateProvinceName** to **State-Province**
+	- **EnglishCountryRegionName** to **Country-Region**
 
 **In the status bar, verify that the query has 6 columns and 701 rows.**
 
@@ -216,16 +216,16 @@ In this task, you'll configure the **Region** query.
 
 1. Remove all columns, **except** the following:
 
-    - SalesTerritoryKey
-    - SalesTerritoryRegion
-    - SalesTerritoryCountry
-    - SalesTerritoryGroup
+	- SalesTerritoryKey
+	- SalesTerritoryRegion
+	- SalesTerritoryCountry
+	- SalesTerritoryGroup
 
 1. Rename the following three columns:
 
-    - **SalesTerritoryRegion** to **Region**
-    - **SalesTerritoryCountry** to **Country**
-    - **SalesTerritoryGroup** to **Group**
+	- **SalesTerritoryRegion** to **Region**
+	- **SalesTerritoryCountry** to **Country**
+	- **SalesTerritoryGroup** to **Group**
 
 **In the status bar, verify that the query has 4 columns and 10 rows.**
 
@@ -237,17 +237,17 @@ In this task, you'll configure the **Sales** query.
 
 1. Remove all columns, **except** the following:
 
-    - SalesOrderNumber
-    - OrderDate
-    - ProductKey
-    - ResellerKey
-    - EmployeeKey
-    - SalesTerritoryKey
-    - OrderQuantity
-    - UnitPrice
-    - TotalProductCost
-    - SalesAmount
-    - DimProduct
+	- SalesOrderNumber
+	- OrderDate
+	- ProductKey
+	- ResellerKey
+	- EmployeeKey
+	- SalesTerritoryKey
+	- OrderQuantity
+	- UnitPrice
+	- TotalProductCost
+	- SalesAmount
+	- DimProduct
 
 	> ***Note**: You may recall in the **Prepare Data in Power BI Desktop** lab that a small percentage of **FactResellerSales** rows had missing **TotalProductCost** values. The **DimProduct** column has been included to retrieve the product standard cost column to assist fixing the missing values.*
 
@@ -255,7 +255,7 @@ In this task, you'll configure the **Sales** query.
 
 1. To create a custom column, on the **Add Column** ribbon tab, from inside the **General** group, select **Custom Column**.
 
-     ![Picture 5664](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image47.png)
+	![Picture 5664](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image47.png)
 
 1. In the **Custom Column** window, in the **New Column Name** box, replace the text with **Cost**.
 
@@ -263,34 +263,34 @@ In this task, you'll configure the **Sales** query.
 
    ` if [TotalProductCost] = null then [OrderQuantity] * [StandardCost] else [TotalProductCost] `
 
-    > ***Note**: You can copy the expression from the **Snippets.txt** file in the 02-load-data folder.*
+	> ***Note**: You can copy the expression from the **Snippets.txt** file in the 02-load-data folder.*
 
-    > *This expression tests if the **TotalProductCost** value is missing. If missing, it produces a value by multiplying the **OrderQuantity** value by the **StandardCost** value; otherwise, it uses the existing **TotalProductCost** value.*
+	> *This expression tests if the **TotalProductCost** value is missing. If missing, it produces a value by multiplying the **OrderQuantity** value by the **StandardCost** value; otherwise, it uses the existing **TotalProductCost** value.*
 
 1. Remove the following two columns:
 
-    - TotalProductCost
-    - StandardCost
+	- TotalProductCost
+	- StandardCost
 
 1. Rename the following three columns:
 
-    - **OrderQuantity** to **Quantity**
-    - **UnitPrice** to **Unit Price** (include a space)
-    - **SalesAmount** to **Sales**
+	- **OrderQuantity** to **Quantity**
+	- **UnitPrice** to **Unit Price** (include a space)
+	- **SalesAmount** to **Sales**
 
 1. To modify the column data type, in the **Quantity** column header, at the left of the column name, select the **1.2** icon, and then select **Whole Number**.
 
 	> *Configuring the correct data type is important. When the column contains numeric value, it’s also important to choose the correct type if you expect to perform mathematic calculations.*
 
-     ![Picture 5667](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image50.png)
+	![Picture 5667](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image50.png)
 
 1. Modify the following three column data types to **Fixed Decimal Number**.
 
 	> *The fixed decimal number data type allows for 19 digits, and allows for more precision to avoid rounding errors. It’s important to use the fixed decimal number type for financial values, or rates (like exchange rates).*
 
-    - Unit Price
-    - Sales
-    - Cost
+	- Unit Price
+	- Sales
+	- Cost
 
 **In the status bar, verify that the query has 10 columns and 999+ rows.** *A maximum of 1000 rows will be loaded as preview data for each query.*
 
@@ -300,7 +300,7 @@ In this task, you'll configure the **Targets** query.
 
 1. Select the **ResellerSalesTargets** query and rename to **Targets**.
 
-> **Note:** If you receive a warning message asking to specify how to connect, select **Edit Credentials**, and use anonymous access.
+	> **Note:** If you receive a warning message asking to specify how to connect, select **Edit Credentials**, and use anonymous access.
 
 1. To unpivot the 12 month columns (**M01**-**M12**), first multi-select the **Year** and **EmployeeID** column headers.
 
@@ -314,8 +314,8 @@ In this task, you'll configure the **Targets** query.
 
 1. Rename the following two columns:
 
-    - **Attribute** to **MonthNumber** (there's no space)
-    - **Value** to **Target**
+	- **Attribute** to **MonthNumber** (there's no space)
+	- **Value** to **Target**
 
 1. To prepare the **MonthNumber** column values, right-click the **MonthNumber** column header, and then select **Replace Values**.
 
@@ -327,7 +327,7 @@ In this task, you'll configure the **Targets** query.
 
 1. On the **Add Column** ribbon tab, from inside the **General** group, select The **Column From Examples** icon.
 
-    ![Picture 5675](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image59.png)
+	![Picture 5675](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image59.png)
 
 1. Notice that the first row is for year **2017** and month number **7**.
 
@@ -341,25 +341,25 @@ In this task, you'll configure the **Targets** query.
 
 1. Notice also the formula presented above the query grid.
 
-     ![Picture 5679](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image60.png)
+	![Picture 5679](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image60.png)
 
 1. To rename the new column, double-click the **Merged** column header and rename the column as **TargetMonth**.
 
 1. Remove the following columns:
 
-    - Year
-    - MonthNumber
+	- Year
+	- MonthNumber
 
 1. Modify the following column data types:
 
-    - **Target** as fixed decimal number
-    - **TargetMonth** as date
+	- **Target** as fixed decimal number
+	- **TargetMonth** as date
 
 1. To multiply the **Target** values by 1000, select the **Target** column header, and then on the **Transform** ribbon tab, from inside the **Number Column** group, select **Standard**, and then select **Multiply**.
 
 	> *You may recall that the target values were stored as thousands.*
 
-     ![Picture 5682](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image63.png)
+	![Picture 5682](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image63.png)
 
 1. In the **Multiply** window, in the **Value** box, enter **1000**, and select **OK**.
 
@@ -373,7 +373,7 @@ In this task, you'll configure the **ColorFormats** query.
 
 1. On the **Home** ribbon tab, from inside the **Transform** group, select **Use First Row as Headers**.
 
-     ![Picture 5688](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image68.png)
+	![Picture 5688](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image68.png)
 
 **In the status bar, verify that the query has 3 columns and 10 rows.**
 
@@ -387,15 +387,15 @@ In this task, you'll update the **Product** query by merging the **ColorFormats*
 
 	> *Merging queries allows integrating data, in this case from different data sources (SQL Server and a CSV file).*
 
-     ![Picture 5654](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image71.png)
+	![Picture 5654](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image71.png)
 
 1. In the **Merge** window, in the **Product** query grid, select the **Color** column header.
 
-     ![Picture 5655](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image72.png)
+	![Picture 5655](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image72.png)
 
 1. Beneath the **Product** query grid, in the dropdown list, select the **ColorFormats** query.
 
-     ![Picture 21](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image73.png)
+	![Picture 21](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image73.png)
 
 1. In the **ColorFormats** query grid, select the **Color** column header.
 
@@ -403,14 +403,14 @@ In this task, you'll update the **Product** query by merging the **ColorFormats*
 
 	> *Privacy levels can be configured for data source to determine whether data can be shared between sources. Setting each data source as **Organizational** allows them to share data, if necessary. Private data sources can never be shared with other data sources. It doesn’t mean that Private data can't be shared; it means that the Power Query engine can't share data between the sources.*
 
-     ![Picture 5691](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image74.png)
+	![Picture 5691](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image74.png)
 
 1. In the **Merge** window, use the default **Join Kind** - maintaining the selection of Left Outer and select **OK**.
 
 1. Expand the **ColorFormats** column to include the following two columns:
 
-    - Background Color Format
-    - Font Color Format
+	- Background Color Format
+	- Font Color Format
 
 **In the status bar, verify that the query now has 8 columns and 397 rows.**
 
@@ -422,33 +422,33 @@ In this task, you'll update the **ColorFormats** to disable its load.
 
 1. In the **Query Settings** pane, select the **All Properties** link.
 
-     ![Picture 322](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image80.png)
+	![Picture 322](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image80.png)
 
 1. In the **Query Properties** window, uncheck the **Enable Load To Report** checkbox.
 
 	> *Disabling the load means it will not load as a table to the data model. This is done because the query was merged with the **Product** query, which is enabled to load to the data model.*
 
-     ![Picture 323](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image81.png)
+	![Picture 323](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image81.png)
 
 ### Review final product
 
-In Power Query Editor, verify that you have **8 queries**, correctly named as follows:
+1. In Power Query Editor, verify that you have **8 queries**, correctly named as follows:
 
-- Salesperson
-- SalespersonRegion
-- Product
-- Reseller
-- Region
-- Sales
-- Targets
-- ColorFormats (which won't load to the data model)
+	- Salesperson
+	- SalespersonRegion
+	- Product
+	- Reseller
+	- Region
+	- Sales
+	- Targets
+	- ColorFormats (which won't load to the data model)
 
-Select **Close &amp; Apply** to load the data to the model, and close Power Query Editor window.
+1. Select **Close &amp; Apply** to load the data to the model, and close Power Query Editor window.
 
-![Picture 326](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image83.png)
+	![Picture 326](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image83.png)
 
-You can now see the canvas in Power BI Desktop, with Filters, Visualizations, and Data panes on the right. In the Data pane, notice the **7 tables** loaded to the data model.
+1. You can now see the canvas in Power BI Desktop, with Filters, Visualizations, and Data panes on the right. In the Data pane, notice the **7 tables** loaded to the data model.
 
-![Picture 3](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image84.png)
+	![Picture 3](Linked_image_Files/02-load-data-with-power-query-in-power-bi-desktop_image84.png)
 
 ## Lab complete
